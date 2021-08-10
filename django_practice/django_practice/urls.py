@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import hellofunction
+from .views import hellofunction, helloClass
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hellofunction),
+    path('hello_1/', helloClass.as_view()),
 ]
